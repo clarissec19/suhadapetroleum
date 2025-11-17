@@ -7,18 +7,18 @@ import './home-projects.css';
 
 const HomeProject = () => {
   return (
-    <Section id='home-project'>
-      <div className="projects-bg-wrapper"> 
+    <Section id='home-project' >
+      <div className="projects-bg-wrapper" > 
         <img 
           src={projects_bg} 
           alt="projects background" 
           className="projects-bg" 
         />
 
-        <div className="projects-container">
+        <div className="projects-container" >
 
         
-          <div className="project-item">
+          <div className="project-item" data-aos="fade-up">
        
             <div className="project-image">
               <img 
@@ -38,7 +38,7 @@ const HomeProject = () => {
           </div>
 
 
-          <div className="project-item">
+          <div className="project-item" data-aos="fade-up">
            
             <div className="project-image">
               <img 

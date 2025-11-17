@@ -26,7 +26,7 @@ const Blog = () => {
               Our Clients
             </h3>
           </div>
-          <div className='row'>
+          <div className='row' data-aos="fade-up">
           
             <div className='col-sm-6 col-md-2 text-center'>
               <div className="client-container"> 
@@ -66,7 +66,7 @@ const Blog = () => {
           </div>
 
         
-          <div className='row'>
+          <div className='row' data-aos="fade-up">
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
                 <img src={Client7} alt="Client 7" className="clientImage2" />
@@ -93,7 +93,7 @@ const Blog = () => {
           </div>
 
         
-          <div className='row'>
+          <div className='row' data-aos="fade-up">
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
                 <img src={Client11} alt="Client 11" className="clientImage3" />

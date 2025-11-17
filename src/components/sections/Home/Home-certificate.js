@@ -16,7 +16,7 @@ const Facts = () => {
         <div className='container pt-5 pb-3'>
           <div className='row'>
            
-            <div className='col-sm-6 col-md-4 text-center'>
+            <div className='col-sm-6 col-md-4 text-center'  data-aos="fade-up" >
               <div className="ISO-container"> 
                 <img src={ISO1} alt="ISO1" className="IOS1" />
               </div>
@@ -25,7 +25,7 @@ const Facts = () => {
             </div>
 
          
-            <div className='col-sm-6 col-md-4 text-center'>
+            <div className='col-sm-6 col-md-4 text-center' data-aos="fade-up">
               <div className="ISO-container"> 
                 <img src={ISO2} alt="ISO2" className="IOS1" />
               </div>
@@ -34,7 +34,7 @@ const Facts = () => {
             </div>
 
            
-            <div className='col-sm-6 col-md-4 text-center'>
+            <div className='col-sm-6 col-md-4 text-center' data-aos="fade-up">
               <div className="ISO-container"> 
                 <img src={ISO3} alt="ISO3" className="IOS1" />
               </div>

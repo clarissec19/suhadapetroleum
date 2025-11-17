@@ -109,6 +109,7 @@
     .nav-container {
         padding: 0 1.25rem;
         width: 100%;
+        gap: 0rem;
     }
 
     .logoImage {

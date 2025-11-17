@@ -11,7 +11,7 @@ const About = () => {
     <Section id='about'>
       <div className='container pt-2 pb-5'>
         <div className="two-column-container">
-          <div className='text-column'>
+          <div className='text-column' data-aos="fade-up">
             <div className='main-header'>
               <h3 className='main-title '>PT SUHADA PETROLEUM</h3>
             </div>
@@ -24,7 +24,7 @@ const About = () => {
               FIND OUT MORE
             </button>
           </div>
-          <div className="image-column">
+          <div className="image-column" data-aos="fade-up" data-aos-delay="150">
             <img src={solidFeedingImage} alt="About PT Suhada Petroleum" className="solidFeedingImage" />
           </div>
         </div>

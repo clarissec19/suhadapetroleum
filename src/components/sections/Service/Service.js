@@ -16,18 +16,8 @@ function NextArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="custom-next-arrow"
-      style={{ 
-        display: "block",
-        background: `url(${rightarrow}) no-repeat center center`,
-        backgroundSize: "contain",
-        position: "absolute",
-        top: "120px",
-        right: "100px",
-        width: "100px", 
-        height: "100px", 
-        zIndex: 1
-      }}
+      className="custom-arrow custom-next-arrow"
+      style={{ backgroundImage: `url(${rightarrow})` }}
       onClick={onClick}
     />
   );
@@ -37,18 +27,8 @@ function PrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="custom-prev-arrow" 
-      style={{ 
-        display: "block",
-        background: `url(${leftarrows}) no-repeat center center`,
-        backgroundSize: "contain",
-        position: "absolute",
-        top: "120px",
-        left: "100px",
-        width: "100px", 
-        height: "100px", 
-        zIndex: 1
-      }}
+      className="custom-arrow custom-prev-arrow" 
+      style={{ backgroundImage: `url(${leftarrows})` }}
       onClick={onClick}
     />
   );
@@ -75,19 +55,14 @@ const FacilitiesCarousel = ({ updateLocation }) => {
   };
 
   return (
-    <div className="relative h-screen justify-center items-center">
-      <Slider {...settings} className="w-[750px]">
+    <div className="facilities-carousel">
+      <Slider {...settings} className="facilities-slider">
         {[workshop1, workshop2].map((src, index) => (
-          <div key={index} className="justify-center">
+          <div key={index} className="facility-slide">
             <img
               src={src}
               alt={`Facility ${index + 1}`}
-              className="rounded-lg mx-auto"
-              style={{
-                width: "1000px",
-                height: "333px",
-                objectFit: "cover",
-              }}
+              className="facility-slide-image"
             />
           </div>
         ))}
@@ -109,8 +84,8 @@ const Service = () => {
       <h2 className="text-10xl font-bold text-transparent pt-32">&nbsp;</h2>
       <h2 className="text-10xl font-bold text-transparent pt-32">&nbsp;</h2>
 
-      <div className="flex justify-between items-center padding-left">
-        <div className="w-2">
+      <div className="services-info padding-left">
+        <div className="services-text">
           <h2 className="services-title">Our Services</h2>
           <ul className="service-list list-disc pl-5 text-xl text-black">
             <li>General Overhaul Pump & Gas Engine Service</li>
@@ -125,14 +100,14 @@ const Service = () => {
           </ul>
         </div>
 
-        <div className="w-1" style={{ width: '400px', height: '400px' }}>
+        <div className="services-image">
           <img
               src={serviceImage}
               alt="Workshop Service"
-              style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               className="rounded-lg shadow-lg"
           />
-      </div></div>
+        </div>
+      </div>
 
 
       <h2 className="text-10xl font-bold text-transparent pt-32">&nbsp;</h2>
@@ -141,7 +116,7 @@ const Service = () => {
 
 
       <section
-        className="bg-cover bg-center py-12 px-6 pr-14 relative flex-col items-center"
+        className="service-facilities bg-cover bg-center py-12 px-6 pr-14 relative flex-col items-center"
         style={{
           backgroundImage: `url(${servicebg})`,
           backgroundSize: "cover",
@@ -153,13 +128,13 @@ const Service = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div className="relative z-10 text-white text-center">
+        <div className="relative z-10 text-white text-center facility-content">
           <p className="font-semibold mb-4">&nbsp;</p>
           <h1 className="custom-heading font-bold mb-6 mt-20">Our Facilities</h1>
 
           <p className="font-semibold mb-4">&nbsp;</p>
           
-          <div className="w-[200px]">
+          <div className="facilities-carousel-wrapper">
             <FacilitiesCarousel updateLocation={setAddress} />
           </div>
 

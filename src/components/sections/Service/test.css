@@ -1,9 +1,4 @@
 
-.flex {
-    display: flex;
-    padding-right: 10rem;
-  }
-
 .padding-left {
     padding-left: 8rem; 
   }
@@ -26,57 +21,255 @@
   display: none !important;
 }
 
-.custom-next-arrow, .custom-prev-arrow {
+.custom-arrow {
   display: block !important;
-  background-size: cover;
-  width: 30px;
-  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  z-index: 2;
   cursor: pointer;
 }
 
-  
-  .justify-between {
-    justify-content: space-between;
-  }
-  
-  .services-title {
-    font-size: 60px;
-    font-weight: 900;
-    color: #b8b238;
-    text-align: left;
-    font-family: Arial, sans-serif;
-    padding-bottom: 30px;
-    padding-top: -30px;
-    margin-top: -30px;
-    padding-left: 10px;
-  }
+.custom-next-arrow {
+  right: 12px;
+}
 
+.custom-prev-arrow {
+  left: 12px;
+}
 
- 
+.services-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 6rem;
+}
+
+.services-text {
+  flex: 1;
+}
+
+.services-image {
+  flex: 0 0 380px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.services-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.services-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: #b8b238;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  padding-bottom: 30px;
+  margin-top: -30px;
+  padding-left: 10px;
+}
 
 .service-list li {
-    margin-bottom: 0.5rem;  
-    font-size: 1.3rem;
-  }
-  
-  .med-text {
-    font-size: 1.3rem;  
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.med-text {
+  font-size: 1.3rem;
+}
+
+.service-facilities {
+  min-height: 620px;
+}
+
+.facility-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.facilities-carousel-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.facilities-carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.facilities-slider {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+
+
+.facility-slide-image {
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1200px) {
+  .services-info {
+    padding-right: 3rem;
   }
 
-  
-  .items-center {
-    align-items: center;
+  .facilities-carousel-wrapper {
+    max-width: 880px;
+    padding: 0 1.5rem;
   }
-  
-  .space-x-6 {
-    gap: 24px; 
+
+  .facilities-slider {
+    max-width: 760px;
   }
-  
-  .w-2 {
-    width: 66.6667%;
+
+ 
+}
+
+@media (max-width: 992px) {
+  .padding-left {
+    padding-left: 2rem;
   }
-  
-  .w-1 {
-    width: 33.3333%;
+
+  .services-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 2rem;
   }
-  
+
+  .services-title {
+    font-size: 40px;
+    padding-left: 0;
+  }
+
+  .services-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+ .facility-slide-image {
+  height: 150px;
+  object-fit: contain;
+  padding-right: 10px;
+ }
+
+
+ .facilities-carousel-wrapper {
+  max-width: 720px;
+
+
+ }
+
+ .facilities-slider {
+  max-width: 620px;
+ }
+
+  .custom-arrow {
+    width: 60px;
+    height: 60px;
+  }
+
+  .custom-next-arrow {
+    right: 8px;
+  }
+
+  .custom-prev-arrow {
+    left: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-info {
+    padding: 0 1.5rem;
+  }
+
+  .service-list {
+    padding-left: 1rem;
+  }
+
+  .facility-content {
+    padding: 0 1rem;
+  }
+
+  .facilities-carousel-wrapper {
+    padding: 0;
+  }
+
+  .facilities-carousel {
+    padding: 0 1rem;
+  }
+
+  .facility-slide-image {
+    height: 220px;
+  }
+
+  .custom-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .custom-next-arrow {
+    right: 5px;
+  }
+
+  .custom-prev-arrow {
+    left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .services-info {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .services-title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .service-list li {
+    font-size: 1.1rem;
+  }
+
+  .facilities-carousel {
+    padding: 0;
+  }
+
+  .facility-slide-image {
+    height: 190px;
+  }
+
+  .custom-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .custom-next-arrow {
+    right: 7px;
+  }
+
+  .custom-prev-arrow {
+    left: 0;
+  }
+
+}

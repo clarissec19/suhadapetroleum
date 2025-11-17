@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <nav className={`navbar ${navClass}`}>
-      <div className="container">
+      <div className="nav-container">
         <div className="logo">
           <img src={logo} alt="Company Logo" className="logoImage" />
         </div>

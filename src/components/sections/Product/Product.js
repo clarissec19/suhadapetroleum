@@ -10,10 +10,10 @@ const Product = () => {
   return (
     <Section id="products">
       <div className='section-header'>
-        <h3 className='section-title margin-left ' style={{ fontSize: '60px'}}>Our Products</h3>
+        <h3 className='section-title margin-left ' >Our Products</h3>
       </div>
       
-      <div className='container pb-5' style={{ maxWidth: '1300px', transform: 'translateX(25px)' }}>
+      <div className='container pb-5' >
         <div className="two-column-container">
           <div className='text-column'>
           <ul className='product-list'>
@@ -34,8 +34,8 @@ const Product = () => {
         </div></div>
       </div>
 
-      <div className='container pt-2 pb-5' style={{ maxWidth: '1300px', transform: 'translateX(50px)' }}>
-        <div className="two-column-container">
+      <div className='container pt-2 pb-5'>
+        <div className="two-column-container reverse-mobile">
           <div className="image-column">
             <img src={Arrow} alt="Arrow" className="image" />
             <p className="image-description pb-4">
@@ -53,11 +53,11 @@ const Product = () => {
         </div>
       </div>
 
-      <div className='container pt-2 pb-5' style={{ maxWidth: '1300px', transform: 'translateX(50px)' }}>
-        <h3 style={{ fontSize: '70px', textAlign: 'left' }}>Others</h3>
+      <div className='container pt-2 pb-5' >
+        <h3 className='other-header' >Others</h3>
         <div className="three-column-container">
           <div className='text-column'>
-            <ul className='product-list'>
+            <ul className='product-list bulleted'>
               <li>Pressure Vessel</li>
               <li>Boiler</li>
               <li>Cooler</li>
@@ -67,7 +67,7 @@ const Product = () => {
             </ul>
           </div>
           <div className='text-column'>
-            <ul className='product-list'>
+            <ul className='product-list bulleted'>
               <li>Scrubber</li>
               <li>KO Drum</li>
               <li>Air Receiver</li>
@@ -76,7 +76,7 @@ const Product = () => {
             </ul>
           </div>
           <div className='text-column'>
-            <ul className='product-list'>
+            <ul className='product-list bulleted'>
               <li>Pig Launcher</li>
               <li>Pig Receiver</li>
               <li>Media Filter</li>

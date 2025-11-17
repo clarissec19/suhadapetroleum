@@ -10,7 +10,7 @@ const Footer = () => {
 
           <div className='col-sm-6 col-md-6 col-lg-4 mb-5'>
             <div className='footer-title'>
-              <img src={logo} alt="Company Logo" className='footer-logo' style={{ width: '300px', height: 'auto' }} />
+              <img src={logo} alt="Company Logo" className='footer-logo'  />
             </div>
             <div className='footer-content'>
               <p>
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           <div className='col-sm-6 col-md-6 col-lg-2 mb-5'>
-            <div className='footer-title pl-4'>
+            <div className='footer-title'>
               <h6 className='footer-text'>Links</h6>
             </div>
             <div className='footer-content2'>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           <div className='col-sm-6 col-md-6 col-lg-3 mb-5'>
-            <div className='footer-title pl-4'>
+            <div className='footer-title '>
               <h6 className='footer-text'>Contact Us</h6>
             </div>
             <div className='footer-content2'>

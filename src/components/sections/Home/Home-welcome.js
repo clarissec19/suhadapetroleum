@@ -4,6 +4,7 @@ import bg1 from '../../../assets/img/bg1.jpg';
 import bg2 from '../../../assets/img/bg2.jpg';
 import bg3 from '../../../assets/img/bg3.jpg';
 import bg4 from '../../../assets/img/bg4.jpg';
+import './home-welcome.css';
 
 const Home = () => {
   const [slideIndex, setSlideIndex] = useState(1); 
@@ -66,19 +67,19 @@ const Home = () => {
         <div className="slideshow-container">
       
           <div className="mySlides">
-            <img src={bg1} style={{ width: "100%", height: "calc(100vh - 100px)", objectFit: "cover" }} alt="Image 1" />
+            <img src={bg1} className="slide-image" alt="Image 1" />
           </div>
 
           <div className="mySlides">
-            <img src={bg2} style={{ width: "100%", height: "calc(100vh - 100px)", objectFit: "cover" }} alt="Image 2" />
+            <img src={bg2} className="slide-image" alt="Image 2" />
           </div>
 
           <div className="mySlides">
-            <img src={bg3} style={{ width: "100%", height: "calc(100vh - 100px)", objectFit: "cover" }} alt="Image 3" />
+            <img src={bg3} className="slide-image" alt="Image 3" />
           </div>
 
           <div className="mySlides">
-            <img src={bg4} style={{ width: "100%", height: "calc(100vh - 100px)", objectFit: "cover" }} alt="Image 4" />
+            <img src={bg4} className="slide-image" alt="Image 4" />
           </div>
 
          

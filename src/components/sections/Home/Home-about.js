@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Section from '../../../HOC/Section';
 import solidFeedingImage from '../../../assets/img/solid_feeding.jpg';
+import './home-about.css';
 
 const About = () => {
   const history = useHistory();

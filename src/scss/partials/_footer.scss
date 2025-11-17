@@ -17,9 +17,7 @@ footer {
     color: #DADADA;
   }
   
-  .footer-content2 {padding-left: 24px;}
-  
-
+ 
 .quick-links {
   list-style-type: none;
   padding: 0;
@@ -27,9 +25,9 @@ footer {
 }
 
 .footer-logo {
-  width: 30px; 
+  width: 250px; 
   height: auto;
-  display: block;
+  display: inline-flex;
 }
 
 
@@ -60,4 +58,18 @@ footer {
   width: 100%;
 }
 
+}
+
+
+@media (max-width: 600px) {
+  footer {
+    text-align: center;
+    
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    justify-content: center;
+    width: 200px; height: auto;
+  }
 }

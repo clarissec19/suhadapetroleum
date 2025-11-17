@@ -21,7 +21,7 @@ const Facts = () => {
                 <img src={ISO1} alt="ISO1" className="IOS1" />
               </div>
               <h5 className='facts-title'>Quality</h5>
-              <h5 className='facts-title'>ISO 9001:2005</h5>
+              <h5 className='facts-title2 '>ISO 9001:2005</h5>
             </div>
 
          
@@ -30,7 +30,7 @@ const Facts = () => {
                 <img src={ISO2} alt="ISO2" className="IOS1" />
               </div>
               <h5 className='facts-title'>Environmental</h5>
-              <h5 className='facts-title'>ISO 14001-2015</h5>
+              <h5 className='facts-title2 '>ISO 14001-2015</h5>
             </div>
 
            
@@ -39,7 +39,7 @@ const Facts = () => {
                 <img src={ISO3} alt="ISO3" className="IOS1" />
               </div>
               <h5 className='facts-title'>Health & Safety</h5>
-              <h5 className='facts-title'>ISO 45001-2015</h5>
+              <h5 className='facts-title2 '>ISO 45001-2015</h5>
             </div>
           </div>
         </div>

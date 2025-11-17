@@ -42,9 +42,37 @@
 
 }
 
-.btn {
+.facts-title {
+  padding-top: 20px;
+}
+
+.facts-title2 {
+  padding-top: 0px;
+}
+
+.main-header {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#about .btn {
   margin-top: 20px;
-  background-color: #ffd700;
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#ffffff, #ffffff),
+    linear-gradient(135deg, #b8b238, #ffd700);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #1f1f1f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, background-image 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .btn:hover {
+  color: #ffffff;
+  background-image: linear-gradient(135deg, #b8b238, #ffd700);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 900px) {

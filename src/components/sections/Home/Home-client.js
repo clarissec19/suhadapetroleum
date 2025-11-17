@@ -69,25 +69,25 @@ const Blog = () => {
           <div className='row'>
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client7} alt="Client 7" className="clientImage" />
+                <img src={Client7} alt="Client 7" className="clientImage2" />
               </div>
             </div>
 
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client8} alt="Client 8" className="clientImage" />
+                <img src={Client8} alt="Client 8" className="clientImage2" />
               </div>
             </div>
 
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client9} alt="Client 9" className="clientImage" />
+                <img src={Client9} alt="Client 9" className="clientImage2" />
               </div>
             </div>
 
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client10} alt="Client 10" className="clientImage" />
+                <img src={Client10} alt="Client 10" className="clientImage2" />
               </div>
             </div>
           </div>
@@ -96,25 +96,25 @@ const Blog = () => {
           <div className='row'>
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client11} alt="Client 11" className="clientImage2" />
+                <img src={Client11} alt="Client 11" className="clientImage3" />
               </div>
             </div>
 
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client12} alt="Client 12" className="clientImage2" />
+                <img src={Client12} alt="Client 12" className="clientImage3" />
               </div>
             </div>
 
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client13} alt="Client 13" className="clientImage2" />
+                <img src={Client13} alt="Client 13" className="clientImage3" />
               </div>
             </div>
 
             <div className='col-sm-6 col-md-3 text-center'>
               <div className="client-container"> 
-                <img src={Client14} alt="Client 14" className="clientImage2" />
+                <img src={Client14} alt="Client 14" className="clientImage3" />
               </div>
             </div>
           </div>

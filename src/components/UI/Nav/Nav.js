@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import logo from '../../../assets/img/logo.jpg';
+import logo from '../../../assets/img/clearlogo2.png';
 import './nav.css'; 
 
 const Nav = () => {
@@ -23,9 +23,9 @@ const Nav = () => {
   return (
     <nav className={`navbar ${navClass}`}>
       <div className="nav-container">
-        <div className="logo">
+        <Link to="/" className="logo" onClick={() => setToggledNav(false)}>
           <img src={logo} alt="Company Logo" className="logoImage" />
-        </div>
+        </Link>
 
         <button className="nav-toggle" onClick={toggleNav}>
           ☰

@@ -27,10 +27,11 @@
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     max-width: 1400px;
+    gap: 280px;
     padding: 0 2rem;
 }
 
@@ -39,10 +40,12 @@
     height: auto;
     margin-left: 0;
     max-width: 100%;
+    transform: translateY(-8px);
 }
 
+
 .nav-links {
-    margin-top: 5px;
+
     display: flex;
     align-items: center;
     gap: 10px;
@@ -111,6 +114,7 @@
     .logoImage {
         width: 75vw;
         margin-left: 0;
+         transform: translateY(-0px);
     }
 
     .nav-links {
@@ -120,7 +124,7 @@
         width: 100%;
         background: white;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         display: none;
         padding: 20px 24px;
         gap: 8px;
@@ -134,12 +138,25 @@
 
     .nav-links li {
         width: 100%;
+        text-align: center;
     }
 
     .nav-links a {
         width: 100%;
         padding: 12px 0;
+        display: block;
         color: #1f1f1f;
+        text-align: center;
+    }
+
+    .nav-links a::after {
+        background: #b8b238;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after,
+    .nav-links a:active::after {
+        width: 60%;
     }
 
     .nav-toggle {

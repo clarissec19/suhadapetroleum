@@ -1,92 +1,106 @@
 import React from 'react';
 import '../../../scss/partials/_product.scss';
-import NOV from '../../../assets/img/NOV.jpg'; 
-import SSTPump from '../../../assets/img/SSTPump.jpg';
+import NOV from '../../../assets/img/NOV.jpg';
 import Arrow from '../../../assets/img/Arrow.jpg';
 import Section from '../../../HOC/Section';
-import './product.css'; 
+import './product.css';
 
 const Product = () => {
+  const distributors = [
+    {
+      id: 'nov',
+      name: 'National-Oilwell Varco (NOV)',
+      description:
+        'PT SUHADA PETROLEUM is proud to be NOV’s authorized sole distributor in Indonesia, providing engineered pumping solutions and full parts support.',
+      image: NOV,
+      offerings: [
+        'Reciprocating Pumps & Packages',
+        'Reciprocating Plunger Pumps',
+        'Wheatley–Gaso Pump Assemblies',
+        'MSW Reciprocating Pumps',
+        'Omega Pump Packages & Parts',
+      ],
+    },
+    {
+      id: 'arrow',
+      name: 'ARROW Industries',
+      description:
+        'Exclusive partner for Pertamina, delivering dependable slow-speed engines, compressors, and chemical injection systems built for remote operations.',
+      image: Arrow,
+      offerings: [
+        'Slow Speed Gas Engines',
+        'Reciprocating Gas Compressors',
+        'Arrow Natural Gas Compressors',
+        'Arrow & Texsteam Chemical Pumps',
+        'VR Engines',
+      ],
+    },
+  ];
+
+  const otherSegments = [
+    {
+      title: 'Process & Pressure Packages',
+      items: ['Pressure Vessel', 'Boiler', 'Cooler', 'Separator', 'Storage Tank'],
+    },
+    {
+      title: 'Flow Solutions',
+      items: ['Scrubber', 'KO Drum', 'Air Receiver', 'Indirect Heater', 'Fuel Gas Filter'],
+    },
+    {
+      title: 'Pipeline & Utility',
+      items: ['Pig Launcher', 'Pig Receiver', 'Media Filter', 'Heat Exchanger', 'Solid Feeding Package'],
+    },
+  ];
+
   return (
     <Section id="products">
-      <div className='section-header'>
+     <div className='section-header'>
         <h3 className='section-title margin-left ' >Our Products</h3>
       </div>
-      
-      <div className='container pb-5' >
-        <div className="two-column-container">
-          <div className='text-column'>
-          <ul className='product-list'>
-            <li>• National-Oilwell Varco (NOV) Reciprocating Pump, Pump Packages and Parts</li>
-            <li>• National-Oilwell Varco (NOV) Reciprocating Plunger Pumps, Pump Packages and Parts</li>
-            <li>• Wheatley-Gaso Reciprocating Pumps, Pump Packages and Parts</li>
-            <li>• MSW Reciprocating Pumps, Pump Packages and Parts</li>
-            <li>• Omega Reciprocating Pumps, Pump Packages and Parts</li>
-        </ul>
 
-          </div>
-          <div className="image-column">
-            <img src={NOV} alt="NOV" className="image" />
-            <p className="image-description pt-4" style={{ fontWeight: 'bold' }}>
-    PT SUHADA PETROLEUM is proud to be NOV’s authorized sole distributor in Indonesia
-</p>
-
-        </div></div>
+     
+      <div className="distributor-grid">
+        {distributors.map((dist, index) => (
+          <article
+            key={dist.id}
+            className={`distributor-card ${index % 2 === 1 ? 'reverse' : ''}`}
+            data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+          >
+            <div className={`card-media ${dist.id === 'nov' ? 'card-media--tall' : 'card-media--tall'}`}>
+              <img src={dist.image} alt={dist.name} />
+            </div>
+            <div className="card-body">
+              <p className="eyebrow">Authorized Distributor</p>
+              <h4>{dist.name}</h4>
+              <p className="card-description">{dist.description}</p>
+              <ul>
+                {dist.offerings.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
       </div>
 
-      <div className='container pt-2 pb-5'>
-        <div className="two-column-container reverse-mobile">
-          <div className="image-column">
-            <img src={Arrow} alt="Arrow" className="image" />
-            <p className="image-description pb-4">
-              PT. SUHADA PETROLEUM is proud to be ARROW’s exclusive distributor for Pertamina in the country of Indonesia</p> 
-          </div>
-          <div className='text-column'>
-            <ul className='product-list'>
-              <li>• Slow Speed Gas Engines</li>
-              <li>• Reciprocating Gas Compressor</li>
-              <li>• Arrow Natural Gas Compressors</li>
-              <li>• Arrow & Texsteam Chemical Pumps & Parts</li>
-              <li>• VR Engines</li>
-            </ul>
-          </div>
+      <div className="other-products">
+        <div className="other-header" data-aos="fade-up">
+          <h3>Others</h3>
+        
+        </div>
+        <div className="other-grid">
+          {otherSegments.map((segment, idx) => (
+            <div className="other-card" key={segment.title} data-aos="fade-up" data-aos-delay={idx * 120}>
+              <h4>{segment.title}</h4>
+              <ul>
+                {segment.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className='container pt-2 pb-5' >
-        <h3 className='other-header' >Others</h3>
-        <div className="three-column-container">
-          <div className='text-column'>
-            <ul className='product-list bulleted'>
-              <li>Pressure Vessel</li>
-              <li>Boiler</li>
-              <li>Cooler</li>
-              <li>Steel Structure</li>
-              <li>Storage Tank</li>
-              <li>Separator</li>
-            </ul>
-          </div>
-          <div className='text-column'>
-            <ul className='product-list bulleted'>
-              <li>Scrubber</li>
-              <li>KO Drum</li>
-              <li>Air Receiver</li>
-              <li>Indirect Heater</li>
-              <li>Fuel Gas Filter</li>
-            </ul>
-          </div>
-          <div className='text-column'>
-            <ul className='product-list bulleted'>
-              <li>Pig Launcher</li>
-              <li>Pig Receiver</li>
-              <li>Media Filter</li>
-              <li>Heat Exchanger</li>
-              <li>Solid Feeding Package</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </Section>
   );
 };

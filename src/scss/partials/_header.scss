@@ -1,68 +1,31 @@
-/* NAVBAR BASE */
 .navbar {
-  background-color: #ffffff;
-  padding: 10px 20px;
+  background-color: #ffffff; /* Navbar background color */
 }
 
-/* LOGO */
-.logoImage {
-  height: 70px;
-  max-height: 80px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* HAMBURGER BUTTON (mobile) */
 .navbar-toggler {
-  border: none;
-  outline: none;
-  padding: 5px;
+  background: transparent; 
+  border: none; 
 }
 
-/* CUSTOM HAMBURGER ICON */
-.navbar-toggler-icon {
-  width: 28px;
-  height: 3px;
-  background-color: black;
-  display: block;
-  position: relative;
+.hamburger-icon {
+  width: 30px;  
+  height: auto; 
 }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  width: 28px;
-  height: 3px;
-  background-color: black;
-  position: absolute;
-  left: 0;
-  transition: 0.3s ease;
-}
-
-.navbar-toggler-icon::before {
-  top: -8px;
-}
-
-.navbar-toggler-icon::after {
-  top: 8px;
-}
-
-/* MENU ANIMATION */
 .navbar-collapse {
   transition: max-height 0.3s ease;
 }
 
-/* NAV ITEMS */
+.navbar-toggler-icon {
+  background-color: black; 
+}
+
 .nav-item {
-  margin: 5px 0;
+  margin: 5px 0; 
 }
-
-.nav-link {
-  color: #000 !important;
-  font-size: 17px;
-  padding: 8px 15px;
-}
-
-.nav-link:hover {
-  color: #333 !important;
+.logoImage {
+  width: fit-content;
+  height: 100px;
+  max-width: 400px;
+  max-height: 100px;
 }

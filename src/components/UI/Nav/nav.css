@@ -1,158 +1,105 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* ========================================= */
-  /* DESKTOP NAVBAR */
-  /* ========================================= */
-  
-  .navbar {
+
+
+.navbar {
+    width: 100%;
     position: fixed;
     top: 0;
+    
     left: 0;
-    width: 100%;
-    height: 110px;
-    display: flex;
-    align-items: center;
+    height: 80px;
+    z-index: 1000;
+    overflow: hidden;
     background: white;
-    z-index: 9999;
-  }
-  
-  /* LOGO AREA */
-  .logo {
-    background: white;
-    height: 80%;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .logoImage {
-    height: 90px;
-    width: auto;
-    margin-top: -15px;
-  }
-  
-  /* YELLOW DIAGONAL AREA */
-  .navbar::before {
+}
+
+
+.navbar::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 560px;
-    width: calc(100% - 560px);
-    height: 100%;
-    background: #beb437;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-    z-index: -1;
-  }
-  
-  /* DESKTOP MENU */
-  .nav-links-desktop {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin-left: auto;
-    padding-right: 50px;
-  }
-  
-  .nav-links-desktop li a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 100px;
-  }
-  
-  /* DIVIDER LINE */
-  .nav-bottom-line {
-    height: 12px;
-    width: 100%;
-    background: #e8e8e8;
-  }
-  
-  /* ========================================= */
-  /* MOBILE NAV */
-  /* ========================================= */
-  
-  .nav-toggle {
-    display: none;
-  }
-  
-  /* mobile menu container */
-  .nav-links-mobile {
-    position: fixed;
-    top: 110px;
-    right: -250px;
-    width: 250px;
-    height: calc(100vh - 110px);
-    background: #beb437;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    gap: 25px;
-    transition: right 0.3s ease;
-    z-index: 99999;
-  }
-  
-  .nav-links-mobile li a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  
-  /* when opened */
-  .nav-links-mobile.active {
     right: 0;
-  }
-  
-  /* ========================================= */
-  /* MOBILE MEDIA QUERIES */
-  /* ========================================= */
-  
-  @media (max-width: 768px) {
-  
-    /* REMOVE diagonal background on mobile */
-    .navbar::before {
-      display: none;
+    width: 90%;
+    height: 100%;
+    background: #b8b238;
+    clip-path: polygon(28% 0%, 100% 0%, 100% 100%, 35% 100%);
+    z-index: -1;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.logoImage {
+    width: 350px;
+    height: auto;
+    margin-left: -100px;
+}
+
+.nav-links {
+    margin-top: 5px;
+    
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    padding: 10px 25px;
+}
+
+.nav-links a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background: black;
+        flex-direction: column;
+        display: none;
+        padding: 10px;
     }
-  
-    .navbar {
-      height: 100px;
+
+    .nav-links.nav-active {
+        display: flex;
     }
-  
-    .logo {
-      height: 90px;
-      padding: 0 20px;
-    }
-  
-    .logoImage {
-      height: 70px;
-      margin-top: 0;
-    }
-  
-    /* hide desktop menu */
-    .nav-links-desktop {
-      display: none;
-    }
-  
-    /* show hamburger */
+
     .nav-toggle {
-      display: block;
-      margin-left: auto;
-      margin-right: 20px;
-      font-size: 35px;
-      background: none;
-      border: none;
-      z-index: 9999;
+        display: block;
     }
-  
-    /* reposition mobile menu */
-    .nav-links-mobile {
-      top: 90px;
-      height: calc(100vh - 90px);
-    }
-  }
-  
+}

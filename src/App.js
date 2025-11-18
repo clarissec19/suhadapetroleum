@@ -22,7 +22,7 @@ function App() {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('seenIntro', 'true');
-      }, 2000);
+      }, 2500);
       return () => clearTimeout(timer);
     } else {
       setIsLoading(false);

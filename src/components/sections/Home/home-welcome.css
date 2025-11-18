@@ -73,25 +73,24 @@
 @media (max-width: 992px) {
   .slideshow-container,
   .mySlides {
-    min-height: 60vh;
-    height: 60vh;
+    min-height: 55vh;
+    height: 55vh;
   }
 }
 
 @media (max-width: 600px) {
-  .slideshow-container {
-    height: 75vh;
-    min-height: 75vh;
-  }
-
+  .slideshow-container,
   .mySlides {
-    height: 40vh;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0;
   }
 
   .slide-image {
-    object-fit:fill;
-    object-position: center;
-      transform: scale(1.5);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
   }
 
   .prev,

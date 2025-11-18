@@ -27,11 +27,10 @@
 
 .nav-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1400px;
-    gap: 280px;
     padding: 0 2rem;
 }
 
@@ -45,11 +44,11 @@
 
 
 .nav-links {
-
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     padding: 0;
+    margin: -20px 0 0;
     list-style: none;
 }
 
@@ -109,7 +108,7 @@
     .nav-container {
         padding: 0 1.25rem;
         width: 100%;
-        gap: 0rem;
+        justify-content: space-between;
     }
 
     .logoImage {

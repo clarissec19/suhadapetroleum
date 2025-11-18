@@ -64,7 +64,7 @@ const Product = () => {
           <article
             key={dist.id}
             className={`distributor-card ${index % 2 === 1 ? 'reverse' : ''}`}
-            data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+            data-aos={index % 2 === 0 ? 'fade-up' : 'fade-up'}
           >
             <div className={`card-media ${dist.id === 'nov' ? 'card-media--tall' : 'card-media--tall'}`}>
               <img src={dist.image} alt={dist.name} />
